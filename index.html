@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlRoot">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>K-Halal Trade Show Dubai 2026 | ABSO Global</title>
+  
+  <!-- Google Fonts: Cairo (Arabic & Latin) & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#14A69A',
+              dark: '#0e7a71',
+              light: '#e6f6f5',
+              border: '#9eddd7'
+            }
+          },
+          fontFamily: {
+            sans: ['Cairo', 'Inter', 'sans-serif'],
+            display: ['Outfit', 'Cairo', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --brand-color: #14A69A;
+    }
+    body {
+      font-family: 'Cairo', 'Inter', sans-serif;
+      color: #111827;
+      background-color: #f8fafc;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Smooth accordion animation */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .accordion-content.open {
+      max-height: 520px;
+      opacity: 1;
+    }
+
+    /* Custom Checkbox Appearance */
+    .custom-checkbox:checked {
+      background-color: #14A69A;
+      border-color: #14A69A;
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    }
+
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    /* RTL / LTR Adjustments */
+    html[dir="rtl"] .flip-rtl {
+      transform: scaleX(-1);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-[#14A69A] selection:text-white antialiased">
+
+  <!-- Top Navigation & Language Switcher -->
+  <header class="sticky top-0 z-30 glass-nav border-b border-gray-200 shadow-sm">
+    <div class="max-w-xl mx-auto px-4 py-3 flex items-center justify-between">
+      
+      <!-- Flags & Fair Branding -->
+      <div class="flex items-center space-x-2.5 rtl:space-x-reverse">
+        <span class="text-2xl" title="South Korea">🇰🇷</span>
+        <span class="text-xs font-bold text-gray-400">×</span>
+        <span class="text-2xl" title="United Arab Emirates">🇦🇪</span>
+        <div class="ltr:ml-2 ltr:pl-2.5 rtl:mr-2 rtl:pr-2.5 ltr:border-l rtl:border-r border-gray-200 text-start">
+          <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500" data-i18n="expoBadge">
+            معرض ك-حلال التجاري 2026
+          </div>
+          <div class="text-xs font-black text-neutral-900 tracking-tight">DUBAI FESTIVAL CITY</div>
+        </div>
+      </div>
+
+      <!-- Right Controls: Language Selector + Hidden Admin Button -->
+      <div class="flex items-center space-x-2 rtl:space-x-reverse">
+        <!-- Language Switcher Pill -->
+        <div class="flex items-center bg-gray-100 p-0.5 rounded-lg border border-gray-200 text-xs font-bold">
+          <button 
+            type="button" 
+            onclick="setLanguage('ar')" 
+            id="langBtn-ar"
+            class="px-2.5 py-1 rounded-md transition text-white bg-[#14A69A] shadow-sm"
+          >
+            العربية
+          </button>
+          <button 
+            type="button" 
+            onclick="setLanguage('en')" 
+            id="langBtn-en"
+            class="px-2.5 py-1 rounded-md transition text-gray-600 hover:text-neutral-900"
+          >
+            EN
+          </button>
+        </div>
+
+        <!-- Secret Admin Entrance (Completely invisible to buyers) -->
+        <button 
+          type="button" 
+          onclick="openAdminModal()" 
+          aria-label="Admin Entrance" 
+          class="w-8 h-8 opacity-0 cursor-default select-none focus:outline-none"
+        >
+          ⚙️
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-xl w-full mx-auto px-4 py-5">
+
+    <!-- ================= PAGE 1: Lead Capture & Brand Selection ================= -->
+    <section id="page-1" class="block transition-opacity duration-300">
+      
+      <!-- Fair Welcome Banner -->
+      <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-200 mb-5 text-center">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#e6f6f5] text-[#0e7a71] mb-2.5">
+          <span class="w-2 h-2 rounded-full bg-[#14A69A]"></span>
+          <span data-i18n="heroPill">لقاءات الأعمال الثنائية B2B</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl font-black text-neutral-900 tracking-tight mb-2" data-i18n="heroTitle">
+          أهلاً بكم في جناحنا التجاري
+        </h1>
+        <p class="text-xs sm:text-sm text-neutral-700 leading-relaxed max-w-md mx-auto" data-i18n="heroDesc">
+          يسعدنا لقاؤكم في <strong>معرض المنتجات الكورية (K-Halal) 2026</strong> في دبي. يرجى التكرم بتسجيل بياناتكم المهنية لتحميل الكتالوجات والعروض الحصرية لعلاماتنا التجارية.
+        </p>
+      </div>
+
+      <!-- Lead Capture Form -->
+      <form id="leadForm" onsubmit="handleFormSubmit(event)" novalidate class="space-y-4">
+        
+        <!-- Field 1: Name -->
+        <div class="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-200">
+          <label for="buyerName" class="block text-sm font-bold text-neutral-900 mb-1">
+            <span data-i18n="lblName">1. الاسم الكامل</span> <span class="text-red-500">*</span>
+          </label>
+          <p class="text-xs text-neutral-500 mb-2.5" data-i18n="lblNameSub">اسم ممثل الشركة أو المشتري التجاري.</p>
+          <input 
+            type="text" 
+            id="buyerName" 
+            required 
+            placeholder="مثال: د. عبد الله المنصوري" 
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14A69A] focus:border-transparent text-neutral-900 text-base placeholder-gray-400 transition"
+          >
+          <p id="err-name" class="hidden text-xs text-red-600 font-semibold mt-1.5 flex items-center gap-1">
+            <span>⚠️</span> <span data-i18n="errName">يرجى كتابة الاسم الكامل.</span>
+          </p>
+        </div>
+
+        <!-- Field 2: Email -->
+        <div class="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-200">
+          <label for="buyerEmail" class="block text-sm font-bold text-neutral-900 mb-1">
+            <span data-i18n="lblEmail">2. البريد الإلكتروني الرسمي / للعمل</span> <span class="text-red-500">*</span>
+          </label>
+          <p class="text-xs text-neutral-500 mb-2.5" data-i18n="lblEmailSub">سنرسل عروض الأسعار والملفات الرقمية إلى هذا العنوان.</p>
+          <input 
+            type="email" 
+            id="buyerEmail" 
+            dir="ltr"
+            required 
+            placeholder="name@company.com" 
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14A69A] focus:border-transparent text-neutral-900 text-base placeholder-gray-400 text-start transition font-sans"
+          >
+          <p id="err-email" class="hidden text-xs text-red-600 font-semibold mt-1.5 flex items-center gap-1">
+            <span>⚠️</span> <span data-i18n="errEmail">يرجى إدخال عنوان بريد إلكتروني صحيح.</span>
+          </p>
+        </div>
+
+        <!-- Field 3: Brands Accordion (Multiple Selection) -->
+        <div class="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-200">
+          <div class="flex items-center justify-between mb-1">
+            <label class="block text-sm font-bold text-neutral-900">
+              <span data-i18n="lblBrands">3. العلامات التجارية موضع اهتمامكم</span> <span class="text-red-500">*</span>
+            </label>
+            <span class="text-[11px] font-bold text-[#14A69A] bg-[#e6f6f5] px-2.5 py-0.5 rounded-full" data-i18n="badgeMulti">
+              اختيار متعدد
+            </span>
+          </div>
+          <p class="text-xs text-neutral-500 mb-3" data-i18n="lblBrandsSub">
+            انقر على أي علامة تجارية لعرض تفاصيلها وصورتها التوضيحية.
+          </p>
+
+          <!-- Accordion Brand Items List -->
+          <div class="space-y-3" id="brandCardsWrapper">
+            
+            <!-- BRAND 1: Abso -->
+            <div class="border border-gray-200 rounded-xl overflow-hidden transition-all bg-white hover:border-[#14A69A]" id="card-brand-1">
+              <div class="flex items-center justify-between p-3.5 cursor-pointer bg-gray-50/60" onclick="toggleAccordion(1, event)">
+                <label class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer flex-1" onclick="event.stopPropagation()">
+                  <input type="checkbox" name="brands" value="1" class="custom-checkbox w-5 h-5 rounded text-[#14A69A] border-gray-300 focus:ring-[#14A69A] transition" onchange="updateBrandSelection(1)">
+                  <div>
+                    <span class="font-black text-sm text-neutral-900">1. Abso</span>
+                    <span class="ltr:ml-2 rtl:mr-2 text-[11px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-md" data-i18n="brand1Badge">مستحضرات علاجية سريرية</span>
+                  </div>
+                </label>
+                <button type="button" class="p-1 text-gray-500 hover:text-neutral-900 focus:outline-none transition-transform" id="arrow-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+              </div>
+              <div class="accordion-content px-4 bg-white" id="content-1">
+                <div class="py-3 border-t border-gray-100 text-start">
+                  <p class="text-xs text-neutral-800 leading-relaxed font-medium mb-3" data-i18n="brand1Desc">
+                    <strong>Abso (أبسو):</strong> علامة تجميلية طبية مطورة في مستشفيات وعيادات الجلدية الكورية المتخصصة. تركيبات عالية التركيز مخصصة لتجديد خلايا البشرة والعناية المتقدمة بعد الإجراءات السريرية.
+                  </p>
+                  <div class="rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
+                    <img 
+                      src="./main_1.png" 
+                      alt="Abso Clinic Skincare" 
+                      class="w-full h-44 object-cover"
+                      onerror="this.onerror=null; this.src='https://placehold.co/600x320/14A69A/ffffff?text=Abso+Clinical+Derma+Line';"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BRAND 2: A'demang -->
+            <div class="border border-gray-200 rounded-xl overflow-hidden transition-all bg-white hover:border-[#14A69A]" id="card-brand-2">
+              <div class="flex items-center justify-between p-3.5 cursor-pointer bg-gray-50/60" onclick="toggleAccordion(2, event)">
+                <label class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer flex-1" onclick="event.stopPropagation()">
+                  <input type="checkbox" name="brands" value="2" class="custom-checkbox w-5 h-5 rounded text-[#14A69A] border-gray-300 focus:ring-[#14A69A] transition" onchange="updateBrandSelection(2)">
+                  <div>
+                    <span class="font-black text-sm text-neutral-900">2. A'demang</span>
+                    <span class="ltr:ml-2 rtl:mr-2 text-[11px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-md" data-i18n="brand2Badge">حاجز البشرة اليومي</span>
+                  </div>
+                </label>
+                <button type="button" class="p-1 text-gray-500 hover:text-neutral-900 focus:outline-none transition-transform" id="arrow-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+              </div>
+              <div class="accordion-content px-4 bg-white" id="content-2">
+                <div class="py-3 border-t border-gray-100 text-start">
+                  <p class="text-xs text-neutral-800 leading-relaxed font-medium mb-3" data-i18n="brand2Desc">
+                    <strong>A'demang (أديمانغ):</strong> عناية يومية فائقة مكرسة لحماية وتقوية حاجز البشرة المتضرر، مع تعزيز الترطيب العميق ومقاومة العوامل البيئية والمناخية القاسية.
+                  </p>
+                  <div class="rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
+                    <img 
+                      src="./main_2.png" 
+                      alt="A'demang Skin Barrier" 
+                      class="w-full h-44 object-cover"
+                      onerror="this.onerror=null; this.src='https://placehold.co/600x320/0e7a71/ffffff?text=A%27demang+Skin+Barrier';"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BRAND 3: Cli Di -->
+            <div class="border border-gray-200 rounded-xl overflow-hidden transition-all bg-white hover:border-[#14A69A]" id="card-brand-3">
+              <div class="flex items-center justify-between p-3.5 cursor-pointer bg-gray-50/60" onclick="toggleAccordion(3, event)">
+                <label class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer flex-1" onclick="event.stopPropagation()">
+                  <input type="checkbox" name="brands" value="3" class="custom-checkbox w-5 h-5 rounded text-[#14A69A] border-gray-300 focus:ring-[#14A69A] transition" onchange="updateBrandSelection(3)">
+                  <div>
+                    <span class="font-black text-sm text-neutral-900">3. Cli Di</span>
+                    <span class="ltr:ml-2 rtl:mr-2 text-[11px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-md" data-i18n="brand3Badge">تفتيح ونضارة متكاملة</span>
+                  </div>
+                </label>
+                <button type="button" class="p-1 text-gray-500 hover:text-neutral-900 focus:outline-none transition-transform" id="arrow-3">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+              </div>
+              <div class="accordion-content px-4 bg-white" id="content-3">
+                <div class="py-3 border-t border-gray-100 text-start">
+                  <p class="text-xs text-neutral-800 leading-relaxed font-medium mb-3" data-i18n="brand3Desc">
+                    <strong>Cli Di (كلي دي):</strong> مستحضرات تفتيح متطورة تستهدف التصبغات وآثار أشعة الشمس لتوحيد لون البشرة وإضفاء إشراقة طبيعية مفعمة بالحيوية والصفاء.
+                  </p>
+                  <div class="rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
+                    <img 
+                      src="./main_3.png" 
+                      alt="Cli Di Radiance Skincare" 
+                      class="w-full h-44 object-cover"
+                      onerror="this.onerror=null; this.src='https://placehold.co/600x320/eab308/ffffff?text=Cli+Di+Tone+Brightening';"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BRAND 4: Formula:In -->
+            <div class="border border-gray-200 rounded-xl overflow-hidden transition-all bg-white hover:border-[#14A69A]" id="card-brand-4">
+              <div class="flex items-center justify-between p-3.5 cursor-pointer bg-gray-50/60" onclick="toggleAccordion(4, event)">
+                <label class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer flex-1" onclick="event.stopPropagation()">
+                  <input type="checkbox" name="brands" value="4" class="custom-checkbox w-5 h-5 rounded text-[#14A69A] border-gray-300 focus:ring-[#14A69A] transition" onchange="updateBrandSelection(4)">
+                  <div>
+                    <span class="font-black text-sm text-neutral-900">4. Formula:In</span>
+                    <span class="ltr:ml-2 rtl:mr-2 text-[11px] bg-purple-100 text-purple-900 font-bold px-2 py-0.5 rounded-md" data-i18n="brand4Badge">الجمال من الداخل (Inner Beauty)</span>
+                  </div>
+                </label>
+                <button type="button" class="p-1 text-gray-500 hover:text-neutral-900 focus:outline-none transition-transform" id="arrow-4">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+              </div>
+              <div class="accordion-content px-4 bg-white" id="content-4">
+                <div class="py-3 border-t border-gray-100 text-start">
+                  <p class="text-xs text-neutral-800 leading-relaxed font-medium mb-3" data-i18n="brand4Desc">
+                    <strong>Formula:In (فورميولا:إن):</strong> حلول غذائية وتكميلية ذكية ومبتكرة، مصممة بطريقة عملية وسهلة التناول لدعم مرونة البشرة والصحة الخلوية من الداخل إلى الخارج.
+                  </p>
+                  <div class="rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
+                    <img 
+                      src="./main_4.png" 
+                      alt="Formula:In Inner Beauty" 
+                      class="w-full h-44 object-cover"
+                      onerror="this.onerror=null; this.src='https://placehold.co/600x320/9333ea/ffffff?text=Formula%3AIn+Inner+Beauty';"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BRAND 5: DPD -->
+            <div class="border border-gray-200 rounded-xl overflow-hidden transition-all bg-white hover:border-[#14A69A]" id="card-brand-5">
+              <div class="flex items-center justify-between p-3.5 cursor-pointer bg-gray-50/60" onclick="toggleAccordion(5, event)">
+                <label class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer flex-1" onclick="event.stopPropagation()">
+                  <input type="checkbox" name="brands" value="5" class="custom-checkbox w-5 h-5 rounded text-[#14A69A] border-gray-300 focus:ring-[#14A69A] transition" onchange="updateBrandSelection(5)">
+                  <div>
+                    <span class="font-black text-sm text-neutral-900">5. DPD</span>
+                    <span class="ltr:ml-2 rtl:mr-2 text-[11px] bg-slate-200 text-slate-800 font-bold px-2 py-0.5 rounded-md" data-i18n="brand5Badge">تصنيع وتطوير OEM/ODM</span>
+                  </div>
+                </label>
+                <button type="button" class="p-1 text-gray-500 hover:text-neutral-900 focus:outline-none transition-transform" id="arrow-5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+              </div>
+              <div class="accordion-content px-4 bg-white" id="content-5">
+                <div class="py-3 border-t border-gray-100 text-start">
+                  <p class="text-xs text-neutral-800 leading-relaxed font-medium mb-3" data-i18n="brand5Desc">
+                    <strong>DPD (دي بي دي):</strong> خدمات تصنيع متكاملة (OEM/ODM) تتيح لكم إطلاق علامتكم التجارية الخاصة في مجال مستحضرات التجميل الكورية وفق أعلى معايير الجودة والتكنولوجيا الكورية.
+                  </p>
+                  <div class="rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
+                    <img 
+                      src="./main_5.png" 
+                      alt="DPD OEM ODM Manufacturing" 
+                      class="w-full h-44 object-cover"
+                      onerror="this.onerror=null; this.src='https://placehold.co/600x320/334155/ffffff?text=DPD+Korean+OEM%2FODM';"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <p id="err-brands" class="hidden text-xs text-red-600 font-semibold mt-3 flex items-center gap-1">
+            <span>⚠️</span> <span data-i18n="errBrands">يرجى تحديد علامة تجارية واحدة على الأقل للمتابعة.</span>
+          </p>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button 
+            type="submit" 
+            id="submitBtn"
+            class="w-full py-4 px-6 bg-[#14A69A] hover:bg-[#0e7a71] active:scale-[0.99] text-white font-black text-base rounded-xl shadow-lg shadow-[#14A69A]/30 transition-all flex items-center justify-center space-x-2 rtl:space-x-reverse"
+          >
+            <span id="submitBtnText" data-i18n="btnSubmit">المتابعة وتحميل الكتالوجات</span>
+            <svg class="w-5 h-5 flip-rtl" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+            </svg>
+          </button>
+          <p class="text-center text-[11px] text-neutral-600 mt-2 font-medium" data-i18n="privacyHint">
+            يتم التعامل مع بياناتكم المهنية بأعلى درجات السرية لغرض المتابعة والشراكة التجارية.
+          </p>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- ================= PAGE 2: Catalog Download & Emotional Letter ================= -->
+    <section id="page-2" class="hidden transition-opacity duration-300">
+      
+      <!-- Thank You Confirmation -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 text-center mb-5">
+        <div class="w-14 h-14 bg-[#e6f6f5] text-[#14A69A] rounded-full flex items-center justify-center mx-auto mb-3 shadow-inner">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+          </svg>
+        </div>
+        <span class="text-xs font-bold uppercase tracking-wider text-[#14A69A]" data-i18n="p2Badge">تم تأكيد التسجيل بنجاح</span>
+        <h2 class="text-xl sm:text-2xl font-black text-neutral-900 tracking-tight mt-1 mb-2" data-i18n="p2Title">
+          شاكرين وممتنين لزيارتكم الكريمة!
+        </h2>
+        <p class="text-xs sm:text-sm text-neutral-700 leading-relaxed">
+          <span data-i18n="p2Greeting">عزيزنا الشريك / المشتري الكريم</span> <strong id="displayBuyerName" class="text-neutral-900 underline">المحترم</strong>، <span data-i18n="p2Intro">يسرنا تقديم الكتالوجات والملفات الرسمية للعلامات التي وقع اختياركم عليها:</span>
+        </p>
+      </div>
+
+      <!-- Selected Brochures Download Section -->
+      <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-200 mb-5">
+        <div class="flex items-center justify-between pb-3 border-b border-gray-100 mb-4">
+          <div class="flex items-center space-x-2 rtl:space-x-reverse">
+            <svg class="w-5 h-5 text-[#14A69A]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+            </svg>
+            <h3 class="text-sm font-bold text-neutral-900" data-i18n="p2BrochureTitle">
+              تحميل الملفات التعريفية الرسمية (PDF)
+            </h3>
+          </div>
+          <span class="text-xs text-gray-500 font-bold" id="downloadCountLabel">ملفات جاهزة</span>
+        </div>
+
+        <!-- Download Buttons Container (dynamically injected based on selection) -->
+        <div id="brochureListContainer" class="space-y-3">
+          <!-- Injected via JS -->
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+          <span data-i18n="p2Format">الصيغة: كتالوج رقمي PDF</span>
+          <span class="flex items-center gap-1.5 font-bold text-emerald-700">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span data-i18n="p2ServerActive">السيرفر نشط ومباشر</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Emotional & Respectful Letter to Middle East / UAE Buyers -->
+      <div class="relative overflow-hidden bg-gradient-to-br from-[#14A69A] via-[#0e7a71] to-[#084b45] text-white rounded-2xl p-6 shadow-xl mb-6">
+        <!-- Subtle Background Flag / Watermark -->
+        <div class="absolute -end-6 -bottom-6 opacity-10 text-9xl pointer-events-none select-none">
+          🇦🇪
+        </div>
+
+        <div class="relative z-10 space-y-4 text-start">
+          <div class="flex items-center space-x-2 rtl:space-x-reverse">
+            <span class="text-2xl">🇦🇪</span>
+            <span class="text-xs font-black tracking-widest uppercase text-teal-200" data-i18n="letterBadge">
+              مجموعة ABSO مع شركائنا في الإمارات والخليج
+            </span>
+            <span class="text-2xl">🇰🇷</span>
+          </div>
+
+          <h3 class="text-lg sm:text-xl font-black leading-snug" data-i18n="letterHeading">
+            معاً نحو بناء شراكة استراتيجية وتجارية استثنائية ومستدامة
+          </h3>
+
+          <div class="text-xs sm:text-sm text-teal-50 space-y-3 leading-relaxed">
+            <p data-i18n="letterP1">
+              نؤمن في <strong class="text-white">مجموعة ABSO</strong> وجميع أقسامنا وعلاماتنا المتخصصة، بالمكانة الرائدة والفرص الاستثنائية التي يحملها سوق دولة الإمارات العربية المتحدة ومنطقة الشرق الأوسط، وبأهمية تأسيس علاقات عمل وثيقة مبنية على الثقة المتبادلة والنمو طويل الأمد.
+            </p>
+            <p data-i18n="letterP2">
+              نتقدم إليكم بعميق الشكر والتقدير لاهتمامكم ووقتكم الثمين بزيارة جناحنا في <strong>معرض ك-حلال (K-Halal) 2026 في دبي</strong>.
+            </p>
+            <p class="bg-white/10 p-3.5 rounded-xl border border-white/20 text-white font-medium" data-i18n="letterP3">
+              بناءً على اهتماماتكم المسجلة، سيتواصل معكم فريق تطوير الأعمال الدولي لدينا في أسرع وقت لتقديم عروض تجارية وحلول توريد مخصصة تلبي متطلباتكم.
+            </p>
+            <p class="font-black text-white text-sm" data-i18n="letterP4">
+              نتطلع بشغف كبير لأن نكون شريككم الكوري الموثوق في قطاع الجمال والتصنيع المتقدم.
+            </p>
+          </div>
+
+          <div class="pt-3 flex items-center justify-between border-t border-white/20 text-[11px] text-teal-200">
+            <span data-i18n="letterFooter1">وفد الأعمال الكوري • سيول / دبي</span>
+            <span data-i18n="letterFooter2">معرض دبي 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action: Modify or Restart -->
+      <div class="text-center pb-8">
+        <button 
+          onclick="resetToPage1()" 
+          class="text-xs font-bold text-neutral-800 hover:text-black underline underline-offset-4 transition"
+          data-i18n="btnBack"
+        >
+          ← تعديل البيانات أو اختيار علامات إضافية
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-white border-t border-gray-200 py-4 px-4 text-center text-xs text-neutral-700">
+    <div class="max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center space-x-2 rtl:space-x-reverse">
+        <div class="w-2.5 h-2.5 rounded-full bg-[#14A69A]"></div>
+        <span class="font-extrabold text-neutral-900">ABSO Global Group</span>
+        <span class="text-gray-300">|</span>
+        <span class="text-neutral-700" data-i18n="footerCountry">جمهورية كوريا</span>
+      </div>
+      <div>
+        <span data-i18n="footerEvent">معرض ك-حلال 2026 • دبي فستيفال سيتي</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= ADMIN MODAL (Leads & Cloud Webhook Config) ================= -->
+  <div id="adminModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-3" dir="ltr">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-gray-200 overflow-hidden text-start">
+      
+      <!-- Modal Header -->
+      <div class="px-5 py-4 border-b border-gray-200 bg-gray-50 flex items-center justify-between">
+        <div class="flex items-center space-x-2.5">
+          <div class="p-2 bg-[#e6f6f5] rounded-lg text-[#14A69A]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-base font-extrabold text-neutral-900">두바이 상담회 바이어 관리자 패널</h3>
+            <p class="text-[11px] text-neutral-500">실시간 클라우드 DB 연동 및 로컬 백업 확인</p>
+          </div>
+        </div>
+        <button onclick="closeAdminModal()" class="p-2 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-200 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- VIEW 1: Password Lock Screen (11111) -->
+      <div id="adminAuthSection" class="p-8 text-center space-y-4 my-auto">
+        <div class="w-14 h-14 mx-auto rounded-full bg-[#e6f6f5] text-[#14A69A] flex items-center justify-center shadow-inner">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-lg font-black text-neutral-900">관리자 인증</h4>
+          <p class="text-xs text-neutral-600 mt-1">지정된 5자리 비밀번호를 입력해주세요.</p>
+        </div>
+        
+        <form onsubmit="handleAdminPasswordSubmit(event)" class="max-w-xs mx-auto space-y-3 pt-1">
+          <input 
+            type="password" 
+            id="adminPasswordInput" 
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="10"
+            placeholder="비밀번호 11111" 
+            autocomplete="off"
+            class="w-full text-center tracking-widest text-lg font-bold py-3 px-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14A69A] focus:border-transparent text-neutral-900"
+          >
+          <p id="adminPwError" class="hidden text-xs text-red-600 font-bold">⚠️ 비밀번호가 일치하지 않습니다.</p>
+          <div class="flex gap-2">
+            <button 
+              type="button" 
+              onclick="closeAdminModal()" 
+              class="w-1/2 py-2.5 px-3 bg-gray-100 hover:bg-gray-200 text-neutral-700 text-xs font-bold rounded-xl transition"
+            >
+              닫기
+            </button>
+            <button 
+              type="submit" 
+              class="w-1/2 py-2.5 px-3 bg-[#14A69A] hover:bg-[#0e7a71] text-white text-xs font-extrabold rounded-xl transition shadow-md shadow-[#14A69A]/30"
+            >
+              확인
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- VIEW 2: Leads Data & Cloud Webhook Config -->
+      <div id="adminDataSection" class="hidden flex-1 flex flex-col overflow-hidden">
+        
+        <!-- Cloud Webhook Status Banner -->
+        <div class="bg-amber-50 border-b border-amber-200 p-3.5 text-xs text-amber-900">
+          <div class="flex items-start justify-between gap-2">
+            <div>
+              <div class="font-bold flex items-center gap-1.5">
+                <span>⚡ 구글 스프레드시트 실시간 연동 (필수 세팅)</span>
+                <span id="webhookStatusBadge" class="text-[10px] px-2 py-0.5 rounded font-black bg-gray-200 text-gray-700">미연동 상태</span>
+              </div>
+              <p class="text-[11px] text-amber-800 mt-0.5">
+                바이어 폰에서 제출한 데이터가 내 구글 시트로 즉시 넘어가도록 '구글 Apps Script 웹앱 URL'을 아래에 붙여넣으세요.
+              </p>
+            </div>
+            <button onclick="toggleWebhookInput()" class="text-xs underline font-bold text-amber-800 hover:text-amber-950 flex-shrink-0">
+              URL 설정
+            </button>
+          </div>
+
+          <!-- Webhook input bar -->
+          <div id="webhookConfigRow" class="hidden mt-2.5 pt-2 border-t border-amber-200 flex gap-2">
+            <input 
+              type="url" 
+              id="webhookUrlInput" 
+              placeholder="https://script.google.com/macros/s/.../exec"
+              class="flex-1 px-3 py-1.5 text-xs border border-gray-300 rounded-lg text-neutral-900 focus:outline-none focus:ring-1 focus:ring-[#14A69A]"
+            >
+            <button onclick="saveWebhookUrl()" class="px-3 py-1.5 bg-[#14A69A] text-white rounded-lg font-bold text-xs">
+              저장
+            </button>
+          </div>
+        </div>
+
+        <!-- Leads Count & Export Toolbar -->
+        <div class="px-5 py-3 bg-white border-b border-gray-100 flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center space-x-3">
+            <span class="text-xs text-neutral-600">이 기기 저장 건수: <strong id="adminTotalCount" class="text-neutral-900 font-bold">0</strong></span>
+            <span class="inline-flex items-center gap-1 text-[11px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Live Monitoring
+            </span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button onclick="exportToCSV()" class="px-3 py-1.5 bg-[#14A69A] hover:bg-[#0e7a71] text-white text-xs font-bold rounded-lg transition flex items-center gap-1.5 shadow-sm">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M7.5 12L12 16.5m0 0L16.5 12M12 3v13.5"/>
+              </svg>
+              CSV 다운로드
+            </button>
+            <button onclick="clearAllLeads()" class="px-2.5 py-1.5 text-xs text-red-600 hover:bg-red-50 font-semibold rounded-lg border border-red-200 transition">
+              기록 삭제
+            </button>
+          </div>
+        </div>
+
+        <!-- Leads List Container -->
+        <div class="flex-1 overflow-y-auto p-5">
+          <div id="adminLeadsList" class="space-y-3">
+            <!-- Dynamically populated -->
+          </div>
+          <div id="adminEmptyState" class="py-12 text-center text-gray-400">
+            <svg class="w-12 h-12 mx-auto mb-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <p class="text-sm font-medium text-neutral-600">이 기기에서 직접 제출된 로컬 기록이 없습니다.</p>
+            <p class="text-xs text-gray-400 mt-1">바이어가 자신의 폰으로 제출한 내용은 위 '구글 스프레드시트'로 100% 자동 취합됩니다.</p>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="px-5 py-3 bg-gray-50 border-t border-gray-200 flex justify-between items-center">
+          <button onclick="lockAdminSession()" class="text-xs text-gray-500 hover:text-neutral-900 font-semibold underline">
+            관리자 화면 잠금
+          </button>
+          <button onclick="closeAdminModal()" class="px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold rounded-lg transition">
+            닫기
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Custom Feedback Toast -->
+  <div id="toastMessage" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-neutral-900 text-white px-5 py-3 rounded-xl shadow-2xl text-xs font-semibold flex items-center space-x-2 rtl:space-x-reverse transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+    <span id="toastIcon">✨</span>
+    <span id="toastText">إشعار</span>
+  </div>
+
+  <script>
+    // ==========================================
+    // 1. Dual Language Dictionary (Arabic & English)
+    // ==========================================
+    const I18N = {
+      ar: {
+        dir: "rtl",
+        expoBadge: "معرض ك-حلال التجاري 2026",
+        heroPill: "لقاءات الأعمال الثنائية B2B",
+        heroTitle: "أهلاً بكم في جناحنا التجاري",
+        heroDesc: "يسعدنا لقاؤكم في معرض المنتجات الكورية (K-Halal) 2026 في دبي. يرجى التكرم بتسجيل بياناتكم المهنية لتحميل الكتالوجات والعروض الحصرية لعلاماتنا التجارية.",
+        lblName: "1. الاسم الكامل",
+        lblNameSub: "اسم ممثل الشركة أو المشتري التجاري.",
+        namePlaceholder: "مثال: د. عبد الله المنصوري",
+        errName: "يرجى كتابة الاسم الكامل.",
+        lblEmail: "2. البريد الإلكتروني الرسمي / للعمل",
+        lblEmailSub: "سنرسل عروض الأسعار والملفات الرقمية إلى هذا العنوان.",
+        errEmail: "يرجى إدخال عنوان بريد إلكتروني صحيح.",
+        lblBrands: "3. العلامات التجارية موضع اهتمامكم",
+        lblBrandsSub: "انقر على أي علامة تجارية لعرض تفاصيلها وصورتها التوضيحية.",
+        badgeMulti: "اختيار متعدد",
+        errBrands: "يرجى تحديد علامة تجارية واحدة على الأقل للمتابعة.",
+        btnSubmit: "المتابعة وتحميل الكتالوجات",
+        privacyHint: "يتم التعامل مع بياناتكم المهنية بأعلى درجات السرية لغرض المتابعة والشراكة التجارية.",
+        
+        // Brand Descriptions
+        brand1Badge: "مستحضرات علاجية سريرية",
+        brand1Desc: "Abso (أبسو): علامة تجميلية طبية مطورة في مستشفيات وعيادات الجلدية الكورية المتخصصة. تركيبات عالية التركيز مخصصة لتجديد خلايا البشرة والعناية المتقدمة بعد الإجراءات السريرية.",
+        brand2Badge: "حاجز البشرة اليومي",
+        brand2Desc: "A'demang (أديمانغ): عناية يومية فائقة مكرسة لحماية وتقوية حاجز البشرة المتضرر، مع تعزيز الترطيب العميق ومقاومة العوامل البيئية والمناخية القاسية.",
+        brand3Badge: "تفتيح ونضارة متكاملة",
+        brand3Desc: "Cli Di (كلي دي): مستحضرات تفتيح متطورة تستهدف التصبغات وآثار أشعة الشمس لتوحيد لون البشرة وإضفاء إشراقة طبيعية مفعمة بالحيوية والصفاء.",
+        brand4Badge: "الجمال من الداخل (Inner Beauty)",
+        brand4Desc: "Formula:In (فورميولا:إن): حلول غذائية وتكميلية ذكية ومبتكرة، مصممة بطريقة عملية وسهلة التناول لدعم مرونة البشرة والصحة الخلوية من الداخل إلى الخارج.",
+        brand5Badge: "تصنيع وتطوير OEM/ODM",
+        brand5Desc: "DPD (دي بي دي): خدمات تصنيع متكاملة (OEM/ODM) تتيح لكم إطلاق علامتكم التجارية الخاصة في مجال مستحضرات التجميل الكورية وفق أعلى معايير الجودة والتكنولوجيا الكورية.",
+
+        // Page 2
+        p2Badge: "تم تأكيد التسجيل بنجاح",
+        p2Title: "شاكرين وممتنين لزيارتكم الكريمة!",
+        p2Greeting: "عزيزنا الشريك / المشتري الكريم",
+        p2Intro: "يسرنا تقديم الكتالوجات والملفات الرسمية للعلامات التي وقع اختياركم عليها:",
+        p2BrochureTitle: "تحميل الملفات التعريفية الرسمية (PDF)",
+        p2Format: "الصيغة: كتالوج رقمي PDF",
+        p2ServerActive: "السيرفر نشط ومباشر",
+        btnDownload: "تحميل الملف",
+        letterBadge: "مجموعة ABSO مع شركائنا في الإمارات والخليج",
+        letterHeading: "معاً نحو بناء شراكة استراتيجية وتجارية استثنائية ومستدامة",
+        letterP1: "نؤمن في مجموعة ABSO وجميع أقسامنا وعلاماتنا المتخصصة، بالمكانة الرائدة والفرص الاستثنائية التي يحملها سوق دولة الإمارات العربية المتحدة ومنطقة الشرق الأوسط، وبأهمية تأسيس علاقات عمل وثيقة مبنية على الثقة المتبادلة والنمو طويل الأمد.",
+        letterP2: "نتقدم إليكم بعميق الشكر والتقدير لاهتمامكم ووقتكم الثمين بزيارة جناحنا في معرض ك-حلال (K-Halal) 2026 في دبي.",
+        letterP3: "بناءً على اهتماماتكم المسجلة، سيتواصل معكم فريق تطوير الأعمال الدولي لدينا في أسرع وقت لتقديم عروض تجارية وحلول توريد مخصصة تلبي متطلباتكم.",
+        letterP4: "نتطلع بشغف كبير لأن نكون شريككم الكوري الموثوق في قطاع الجمال والتصنيع المتقدم.",
+        letterFooter1: "وفد الأعمال الكوري • سيول / دبي",
+        letterFooter2: "معرض دبي 2026",
+        btnBack: "← تعديل البيانات أو اختيار علامات إضافية",
+        footerCountry: "جمهورية كوريا",
+        footerEvent: "معرض ك-حلال 2026 • دبي فستيفال سيتي",
+        toastSuccess: "تم حفظ بياناتكم بنجاح! شكراً لكم.",
+        toastDownload: "جاري بدء تحميل الملف..."
+      },
+
+      en: {
+        dir: "ltr",
+        expoBadge: "K-Halal Trade Show Dubai 2026",
+        heroPill: "B2B Business Meetings",
+        heroTitle: "Welcome to Our Exhibition Booth",
+        heroDesc: "Thank you for meeting with us at the K-Halal Trade Show 2026 in Dubai. Please provide your business contact details to access official catalogs and exclusive trade brochures.",
+        lblName: "1. Full Name",
+        lblNameSub: "Authorized business buyer or company representative.",
+        namePlaceholder: "e.g., Dr. Abdulla Al-Mansoor",
+        errName: "Please enter your full name.",
+        lblEmail: "2. Corporate / Work Email",
+        lblEmailSub: "We will send official price quotes and digital brochures to this email.",
+        errEmail: "Please provide a valid corporate email address.",
+        lblBrands: "3. Brands of Interest",
+        lblBrandsSub: "Tap on any brand to view product details and preview images.",
+        badgeMulti: "Multiple Choice",
+        errBrands: "Please select at least one brand to proceed.",
+        btnSubmit: "Proceed & Download Catalogs",
+        privacyHint: "Your professional information will be treated with strict confidentiality for trade partnership follow-up.",
+
+        // Brand Descriptions
+        brand1Badge: "Derma Clinic Skincare",
+        brand1Desc: "Abso: Advanced clinical dermocosmetics developed in top Korean medical dermatological clinics. High-concentration formulas engineered for intensive regeneration and post-treatment care.",
+        brand2Badge: "Daily Skin Barrier Care",
+        brand2Desc: "A'demang: Daily skincare specialized in restoring and protecting weakened skin barriers, locking in deep hydration to withstand harsh arid environments.",
+        brand3Badge: "Radiance & Brightening",
+        brand3Desc: "Cli Di: Premium brightening and hyperpigmentation care designed to fade sun damage, even out skin tone, and restore natural luminous glow.",
+        brand4Badge: "Inner Beauty & Wellness",
+        brand4Desc: "Formula:In: Essential wellness supplements delivering bioavailable nutrition and skin-elasticity boosters in practical, delicious daily formats.",
+        brand5Badge: "OEM / ODM K-Beauty",
+        brand5Desc: "DPD: Full-turnkey Korean cosmetic OEM/ODM manufacturing solutions to produce your private label with premier Korean formulation and R&D standards.",
+
+        // Page 2
+        p2Badge: "Registration Successfully Verified",
+        p2Title: "Thank You for Visiting Our Booth!",
+        p2Greeting: "Dear Esteemed Buyer / Partner",
+        p2Intro: "We have prepared the official commercial brochures for your selected Korean beauty brands:",
+        p2BrochureTitle: "Official Catalog Downloads (PDF)",
+        p2Format: "Format: Digital PDF Document",
+        p2ServerActive: "Direct Server Active",
+        btnDownload: "Download PDF",
+        letterBadge: "ABSO Group with UAE & Middle East Partners",
+        letterHeading: "Building a Sustainable & Exceptional Strategic Partnership",
+        letterP1: "At ABSO Group and across all our specialized divisions, we hold the UAE and Middle Eastern consumer markets in the highest esteem. We firmly believe in creating authentic, long-term commercial alliances built on integrity and shared growth.",
+        letterP2: "We express our sincere gratitude for your valuable time and discussions at the K-Halal Trade Show 2026 at Intercontinental Dubai Festival City.",
+        letterP3: "Based on the brand inquiries you selected, our international trade division will follow up promptly with tailored pricing and cooperation proposals.",
+        letterP4: "We look forward with great enthusiasm to becoming your most reliable Korean beauty and manufacturing partner.",
+        letterFooter1: "Korean Commercial Delegation • Seoul / Dubai",
+        letterFooter2: "Dubai Expo 2026",
+        btnBack: "← Edit details or select additional brands",
+        footerCountry: "Republic of Korea",
+        footerEvent: "K-Halal Expo 2026 • Intercontinental Dubai Festival City",
+        toastSuccess: "Your information has been successfully recorded!",
+        toastDownload: "Starting catalog download..."
+      }
+    };
+
+    let currentLang = 'ar';
+
+    // Master Brand Definitions (Matching filenames brand_1.pdf ~ brand_5.pdf)
+    const BRANDS = {
+      1: {
+        name: "Abso",
+        nameAr: "أبسو (Abso)",
+        pdfFile: "./brand_1.pdf",
+        colorBadge: "bg-emerald-100 text-emerald-900 border-emerald-300"
+      },
+      2: {
+        name: "A'demang",
+        nameAr: "أديمانغ (A'demang)",
+        pdfFile: "./brand_2.pdf",
+        colorBadge: "bg-blue-100 text-blue-900 border-blue-300"
+      },
+      3: {
+        name: "Cli Di",
+        nameAr: "كلي دي (Cli Di)",
+        pdfFile: "./brand_3.pdf",
+        colorBadge: "bg-amber-100 text-amber-900 border-amber-300"
+      },
+      4: {
+        name: "Formula:In",
+        nameAr: "فورميولا:إن (Formula:In)",
+        pdfFile: "./brand_4.pdf",
+        colorBadge: "bg-purple-100 text-purple-900 border-purple-300"
+      },
+      5: {
+        name: "DPD",
+        nameAr: "دي بي دي (DPD)",
+        pdfFile: "./brand_5.pdf",
+        colorBadge: "bg-slate-200 text-slate-900 border-slate-400"
+      }
+    };
+
+    // ==========================================
+    // 2. Storage & Cloud Webhook Config
+    // ==========================================
+    const ADMIN_PASS = "11111";
+    let isAdminUnlocked = false;
+    let leadsData = JSON.parse(localStorage.getItem('abso_leads_backup') || '[]');
+    let currentBuyer = null;
+
+    // Webhook URL (Stored in localStorage or hardcode your deployed Google Apps Script URL here)
+    let GOOGLE_SHEET_WEBHOOK_URL = localStorage.getItem('abso_google_webhook_url') || "";
+
+    // Set & Toggle Language (RTL vs LTR)
+    function setLanguage(lang) {
+      currentLang = lang;
+      const dict = I18N[lang];
+      const htmlEl = document.getElementById('htmlRoot');
+
+      // Set HTML direction and lang
+      htmlEl.setAttribute('dir', dict.dir);
+      htmlEl.setAttribute('lang', lang);
+
+      // Toggle button active styles
+      const btnAr = document.getElementById('langBtn-ar');
+      const btnEn = document.getElementById('langBtn-en');
+      if (lang === 'ar') {
+        btnAr.className = "px-2.5 py-1 rounded-md transition text-white bg-[#14A69A] shadow-sm";
+        btnEn.className = "px-2.5 py-1 rounded-md transition text-gray-600 hover:text-neutral-900";
+      } else {
+        btnEn.className = "px-2.5 py-1 rounded-md transition text-white bg-[#14A69A] shadow-sm";
+        btnAr.className = "px-2.5 py-1 rounded-md transition text-gray-600 hover:text-neutral-900";
+      }
+
+      // Translate all data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+
+      // Update input placeholders
+      document.getElementById('buyerName').setAttribute('placeholder', dict.namePlaceholder);
+
+      // Re-render brochure list if on page 2
+      if (currentBuyer) {
+        renderBrochurePage(currentBuyer);
+      }
+    }
+
+    // Toast Notification without alert()
+    function showToast(text, icon = 'ℹ️') {
+      const toast = document.getElementById('toastMessage');
+      const toastText = document.getElementById('toastText');
+      const toastIcon = document.getElementById('toastIcon');
+      
+      toastText.textContent = text;
+      toastIcon.textContent = icon;
+
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      }, 3500);
+    }
+
+    // Toggle Accordion Content
+    function toggleAccordion(id, event) {
+      if (event) event.preventDefault();
+      
+      const content = document.getElementById(`content-${id}`);
+      const arrow = document.getElementById(`arrow-${id}`);
+      const isOpen = content.classList.contains('open');
+
+      content.classList.toggle('open');
+      arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+
+    // Visual card outline when checked
+    function updateBrandSelection(id) {
+      const card = document.getElementById(`card-brand-${id}`);
+      const checkbox = card.querySelector('input[type="checkbox"]');
+      const content = document.getElementById(`content-${id}`);
+      const arrow = document.getElementById(`arrow-${id}`);
+
+      if (checkbox.checked) {
+        card.classList.add('border-[#14A69A]', 'bg-[#e6f6f5]/25');
+        if (!content.classList.contains('open')) {
+          content.classList.add('open');
+          arrow.style.transform = 'rotate(180deg)';
+        }
+      } else {
+        card.classList.remove('border-[#14A69A]', 'bg-[#e6f6f5]/25');
+      }
+
+      document.getElementById('err-brands').classList.add('hidden');
+    }
+
+    // Validate and submit buyer form
+    async function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const nameInput = document.getElementById('buyerName');
+      const emailInput = document.getElementById('buyerEmail');
+      const errName = document.getElementById('err-name');
+      const errEmail = document.getElementById('err-email');
+      const errBrands = document.getElementById('err-brands');
+      const submitBtn = document.getElementById('submitBtn');
+      const submitBtnText = document.getElementById('submitBtnText');
+
+      let isValid = true;
+
+      // 1. Name validation
+      const nameVal = nameInput.value.trim();
+      if (!nameVal) {
+        errName.classList.remove('hidden');
+        nameInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        errName.classList.add('hidden');
+        nameInput.classList.remove('border-red-500');
+      }
+
+      // 2. Email validation
+      const emailVal = emailInput.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailVal || !emailPattern.test(emailVal)) {
+        errEmail.classList.remove('hidden');
+        emailInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        errEmail.classList.add('hidden');
+        emailInput.classList.remove('border-red-500');
+      }
+
+      // 3. Brands checkbox validation
+      const checkedBoxes = Array.from(document.querySelectorAll('input[name="brands"]:checked'));
+      const selectedBrandIds = checkedBoxes.map(cb => cb.value);
+
+      if (selectedBrandIds.length === 0) {
+        errBrands.classList.remove('hidden');
+        isValid = false;
+      } else {
+        errBrands.classList.add('hidden');
+      }
+
+      if (!isValid) {
+        showToast(currentLang === 'ar' ? 'يرجى استكمال جميع الحقول المطلوبة' : 'Please complete all required fields.', '⚠️');
+        return;
+      }
+
+      // Button Loading State
+      submitBtn.disabled = true;
+      submitBtnText.textContent = currentLang === 'ar' ? "جاري الإرسال والتسجيل..." : "Processing...";
+
+      // Prepare Submission Data with dual timestamps (Dubai GST & Korea KST)
+      const now = new Date();
+      const dubaiTime = now.toLocaleString("en-GB", { timeZone: "Asia/Dubai", hour12: true });
+      const kstTime = now.toLocaleString("ko-KR", { timeZone: "Asia/Seoul", hour12: false });
+
+      const newLead = {
+        id: Date.now().toString(),
+        name: nameVal,
+        email: emailVal,
+        selectedBrandIds: selectedBrandIds,
+        brandNames: selectedBrandIds.map(id => BRANDS[id].name).join(', '),
+        brandNamesAr: selectedBrandIds.map(id => BRANDS[id].nameAr).join(', '),
+        timestampDubai: dubaiTime,
+        timestampKst: kstTime,
+        language: currentLang,
+        rawDate: now.toISOString()
+      };
+
+      // 1. Save locally in device storage (Safe failover)
+      leadsData.unshift(newLead);
+      localStorage.setItem('abso_leads_backup', JSON.stringify(leadsData));
+      currentBuyer = newLead;
+
+      // 2. Transmit to Cloud Database (Google Sheets via Webhook or SheetDB API)
+      await sendToCloudDatabase(newLead);
+
+      // 3. Switch to Download Page
+      renderBrochurePage(newLead);
+      switchPage(2);
+      showToast(I18N[currentLang].toastSuccess, '✅');
+
+      // Reset button state
+      submitBtn.disabled = false;
+      submitBtnText.textContent = I18N[currentLang].btnSubmit;
+    }
+
+    // Transmit lead to Cloud (Google Sheets / Webhook)
+    async function sendToCloudDatabase(lead) {
+      if (!GOOGLE_SHEET_WEBHOOK_URL) {
+        console.warn("Google Sheet Webhook URL not configured. Stored locally only.");
+        return;
+      }
+
+      try {
+        // Send JSON payload via POST (mode: no-cors ensures Google Apps Script succeeds without CORS block)
+        await fetch(GOOGLE_SHEET_WEBHOOK_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(lead)
+        });
+        console.log("Successfully dispatched lead to Google Sheets cloud!");
+      } catch (err) {
+        console.error("Cloud transmission error:", err);
+      }
+    }
+
+    // Render Step 2 Brochure Download List
+    function renderBrochurePage(buyer) {
+      const dict = I18N[currentLang];
+      document.getElementById('displayBuyerName').textContent = buyer.name;
+      const container = document.getElementById('brochureListContainer');
+      container.innerHTML = '';
+
+      const count = buyer.selectedBrandIds.length;
+      document.getElementById('downloadCountLabel').textContent = 
+        currentLang === 'ar' ? `${count} كتالوجات متاحة` : `${count} File(s) Ready`;
+
+      buyer.selectedBrandIds.forEach(brandId => {
+        const brand = BRANDS[brandId];
+        const card = document.createElement('div');
+        card.className = "flex items-center justify-between p-3.5 bg-gray-50 hover:bg-[#e6f6f5]/40 rounded-xl border border-gray-200 transition";
+
+        card.innerHTML = `
+          <div class="flex items-center space-x-3 rtl:space-x-reverse">
+            <div class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center font-black text-neutral-900 text-xs shadow-sm">
+              PDF
+            </div>
+            <div class="text-start">
+              <div class="flex items-center gap-2">
+                <h4 class="font-extrabold text-sm text-neutral-900">${currentLang === 'ar' ? brand.nameAr : brand.name}</h4>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${brand.colorBadge}">
+                  ${dict['brand' + brandId + 'Badge']}
+                </span>
+              </div>
+              <p class="text-xs text-neutral-600 mt-0.5">${brand.name} • Official Catalog 2026</p>
+            </div>
+          </div>
+          <a 
+            href="${brand.pdfFile}" 
+            download="Brochure_${brand.name}_Dubai2026.pdf" 
+            onclick="recordDownload('${brand.name}')"
+            class="px-4 py-2 bg-[#14A69A] hover:bg-[#0e7a71] active:scale-95 text-white font-bold text-xs rounded-lg shadow-sm transition flex items-center space-x-1.5 rtl:space-x-reverse flex-shrink-0"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+            </svg>
+            <span>${dict.btnDownload}</span>
+          </a>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function recordDownload(brandName) {
+      showToast(I18N[currentLang].toastDownload, '📥');
+    }
+
+    function switchPage(pageNumber) {
+      const p1 = document.getElementById('page-1');
+      const p2 = document.getElementById('page-2');
+
+      if (pageNumber === 1) {
+        p2.classList.add('hidden');
+        p1.classList.remove('hidden');
+      } else {
+        p1.classList.add('hidden');
+        p2.classList.remove('hidden');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function resetToPage1() {
+      switchPage(1);
+    }
+
+    // ==========================================
+    // 3. Admin Security & Google Sheet Management
+    // ==========================================
+    function openAdminModal() {
+      const modal = document.getElementById('adminModal');
+      const authSec = document.getElementById('adminAuthSection');
+      const dataSec = document.getElementById('adminDataSection');
+      const pwInput = document.getElementById('adminPasswordInput');
+      const pwErr = document.getElementById('adminPwError');
+
+      pwErr.classList.add('hidden');
+      pwInput.value = '';
+
+      if (isAdminUnlocked) {
+        authSec.classList.add('hidden');
+        dataSec.classList.remove('hidden');
+        updateAdminView();
+      } else {
+        authSec.classList.remove('hidden');
+        dataSec.classList.add('hidden');
+        setTimeout(() => pwInput.focus(), 150);
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function handleAdminPasswordSubmit(e) {
+      if (e) e.preventDefault();
+      const pwInput = document.getElementById('adminPasswordInput');
+      const pwErr = document.getElementById('adminPwError');
+      const authSec = document.getElementById('adminAuthSection');
+      const dataSec = document.getElementById('adminDataSection');
+
+      if (pwInput.value.trim() === ADMIN_PASS) {
+        isAdminUnlocked = true;
+        authSec.classList.add('hidden');
+        dataSec.classList.remove('hidden');
+        pwErr.classList.add('hidden');
+        updateAdminView();
+        showToast('관리자 인증 완료', '🔓');
+      } else {
+        pwErr.classList.remove('hidden');
+        pwInput.value = '';
+        pwInput.focus();
+      }
+    }
+
+    function lockAdminSession() {
+      isAdminUnlocked = false;
+      closeAdminModal();
+      showToast('관리자 화면이 잠겼습니다.', '🔒');
+    }
+
+    function closeAdminModal() {
+      document.getElementById('adminModal').classList.add('hidden');
+    }
+
+    function toggleWebhookInput() {
+      const row = document.getElementById('webhookConfigRow');
+      row.classList.toggle('hidden');
+      const input = document.getElementById('webhookUrlInput');
+      input.value = GOOGLE_SHEET_WEBHOOK_URL;
+    }
+
+    function saveWebhookUrl() {
+      const input = document.getElementById('webhookUrlInput');
+      const val = input.value.trim();
+      GOOGLE_SHEET_WEBHOOK_URL = val;
+      localStorage.setItem('abso_google_webhook_url', val);
+      document.getElementById('webhookConfigRow').classList.add('hidden');
+      updateAdminView();
+      showToast('구글 시트 연동 URL이 저장되었습니다!', '⚡');
+    }
+
+    function updateAdminView() {
+      const countEl = document.getElementById('adminTotalCount');
+      const listEl = document.getElementById('adminLeadsList');
+      const emptyEl = document.getElementById('adminEmptyState');
+      const badge = document.getElementById('webhookStatusBadge');
+
+      if (GOOGLE_SHEET_WEBHOOK_URL) {
+        badge.textContent = "연동 활성화됨 (Google Cloud)";
+        badge.className = "text-[10px] px-2 py-0.5 rounded font-black bg-emerald-100 text-emerald-800";
+      } else {
+        badge.textContent = "미연동 상태 (로컬만 저장)";
+        badge.className = "text-[10px] px-2 py-0.5 rounded font-black bg-amber-200 text-amber-900";
+      }
+
+      countEl.textContent = leadsData.length;
+
+      if (leadsData.length === 0) {
+        listEl.innerHTML = '';
+        emptyEl.classList.remove('hidden');
+        return;
+      }
+
+      emptyEl.classList.add('hidden');
+      listEl.innerHTML = leadsData.map((lead, idx) => `
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 transition hover:shadow-sm">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="inline-block text-[10px] font-bold text-gray-500 bg-gray-200 px-2 py-0.5 rounded">#${leadsData.length - idx}</span>
+              <h4 class="font-black text-sm text-neutral-900 mt-1">${lead.name}</h4>
+              <p class="text-xs text-neutral-600 font-mono">${lead.email}</p>
+            </div>
+            <div class="text-end">
+              <span class="text-[11px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
+                두바이 GST: ${lead.timestampDubai}
+              </span>
+              <div class="text-[10px] text-gray-400 mt-0.5 font-medium">한국 KST: ${lead.timestampKst}</div>
+            </div>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-gray-200 flex flex-wrap gap-1.5 items-center">
+            <span class="text-[11px] font-semibold text-gray-500 mr-1">선택 브랜드:</span>
+            <span class="text-[11px] font-bold text-[#0e7a71] bg-[#e6f6f5] px-2 py-0.5 rounded-md border border-[#9eddd7]">
+              ${lead.brandNames}
+            </span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Export CSV
+    function exportToCSV() {
+      if (leadsData.length === 0) {
+        showToast('저장된 데이터가 없습니다.', '⚠️');
+        return;
+      }
+
+      const headers = ['ID', '이름', '이메일', '선택브랜드', '두바이시간(GST)', '한국시간(KST)', '언어', '등록일시(ISO)'];
+      const rows = leadsData.map(l => [
+        l.id,
+        `"${l.name.replace(/"/g, '""')}"`,
+        `"${l.email.replace(/"/g, '""')}"`,
+        `"${l.brandNames.replace(/"/g, '""')}"`,
+        `"${l.timestampDubai}"`,
+        `"${l.timestampKst}"`,
+        l.language,
+        l.rawDate
+      ]);
+
+      const csvContent = "\uFEFF" + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `K_Halal_Dubai_Leads_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      showToast('CSV 파일이 다운로드되었습니다.', '📄');
+    }
+
+    function clearAllLeads() {
+      if (leadsData.length === 0) return;
+      if (!confirm("이 기기의 로컬 저장 목록을 비우시겠습니까?")) return;
+      leadsData = [];
+      localStorage.removeItem('abso_leads_backup');
+      updateAdminView();
+      showToast('기록이 초기화되었습니다.', '🗑️');
+    }
+
+    // Close on ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAdminModal();
+    });
+  </script>
+</body>
+</html>
