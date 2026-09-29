@@ -458,7 +458,7 @@
 
           <div class="text-xs sm:text-sm text-teal-50 space-y-3 leading-relaxed">
             <p data-i18n="letterP1">
-              نؤمن في <strong class="text-white">مجموعة ABSO</strong> وجميع أقسامنا وعلاماتنا المتخصصة، بالمكانة الرائدة والفرص الاستثنائية التي يحملها سوق دولة الإمارات العربية المتحدة ومنطقة الشرق الأوسط، وبأهمية تأسيس علاقات عمل وثيقة مبنية على الثقة المتبادلة والنمو طويل الأمد.
+              نؤمن في <strong class="text-white">مجموعة ABSO</strong> وجميع أقسامنا وععلاماتنا المتخصصة، بالمكانة الرائدة والفرص الاستثنائية التي يحملها سوق دولة الإمارات العربية المتحدة ومنطقة الشرق الأوسط، وبأهمية تأسيس علاقات عمل وثيقة مبنية على الثقة المتبادلة والنمو طويل الأمد.
             </p>
             <p data-i18n="letterP2">
               نتقدم إليكم بعميق الشكر والتقدير لاهتمامكم ووقتكم الثمين بزيارة جناحنا في <strong>معرض ك-حلال (K-Halal) 2026 في دبي</strong>.
@@ -522,7 +522,7 @@
           </div>
           <div>
             <h3 class="text-base font-extrabold text-neutral-900">두바이 상담회 바이어 관리자 패널</h3>
-            <p class="text-[11px] text-neutral-500">실시간 클라우드 DB 연동 및 로컬 백업 확인</p>
+            <p class="text-[11px] text-neutral-500">구글 스프레드시트 실시간 클라우드 DB 연동</p>
           </div>
         </div>
         <button onclick="closeAdminModal()" class="p-2 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-200 transition">
@@ -541,7 +541,7 @@
         </div>
         <div>
           <h4 class="text-lg font-black text-neutral-900">관리자 인증</h4>
-          <p class="text-xs text-neutral-600 mt-1">지정된 5자리 비밀번호를 입력해주세요.</p>
+          <p class="text-xs text-neutral-600 mt-1">지정된 관리자 비밀번호를 입력해주세요.</p>
         </div>
         
         <form onsubmit="handleAdminPasswordSubmit(event)" class="max-w-xs mx-auto space-y-3 pt-1">
@@ -551,9 +551,9 @@
             inputmode="numeric"
             pattern="[0-9]*"
             maxlength="10"
-            placeholder="비밀번호 11111" 
+            placeholder="관리자 비밀번호를 입력하세요" 
             autocomplete="off"
-            class="w-full text-center tracking-widest text-lg font-bold py-3 px-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14A69A] focus:border-transparent text-neutral-900"
+            class="w-full text-center tracking-widest text-sm font-bold py-3 px-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14A69A] focus:border-transparent text-neutral-900"
           >
           <p id="adminPwError" class="hidden text-xs text-red-600 font-bold">⚠️ 비밀번호가 일치하지 않습니다.</p>
           <div class="flex gap-2">
@@ -578,34 +578,16 @@
       <div id="adminDataSection" class="hidden flex-1 flex flex-col overflow-hidden">
         
         <!-- Cloud Webhook Status Banner -->
-        <div class="bg-amber-50 border-b border-amber-200 p-3.5 text-xs text-amber-900">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <div class="font-bold flex items-center gap-1.5">
-                <span>⚡ 구글 스프레드시트 실시간 연동 (필수 세팅)</span>
-                <span id="webhookStatusBadge" class="text-[10px] px-2 py-0.5 rounded font-black bg-gray-200 text-gray-700">미연동 상태</span>
-              </div>
-              <p class="text-[11px] text-amber-800 mt-0.5">
-                바이어 폰에서 제출한 데이터가 내 구글 시트로 즉시 넘어가도록 '구글 Apps Script 웹앱 URL'을 아래에 붙여넣으세요.
-              </p>
+        <div class="bg-emerald-50 border-b border-emerald-200 p-3.5 text-xs text-emerald-950">
+          <div class="flex items-center justify-between gap-2">
+            <div class="font-bold flex items-center gap-1.5">
+              <span>⚡ 구글 스프레드시트 실시간 연동 활성화</span>
+              <span class="text-[10px] px-2 py-0.5 rounded font-black bg-emerald-200 text-emerald-900">영구 고정 완료</span>
             </div>
-            <button onclick="toggleWebhookInput()" class="text-xs underline font-bold text-amber-800 hover:text-amber-950 flex-shrink-0">
-              URL 설정
-            </button>
           </div>
-
-          <!-- Webhook input bar -->
-          <div id="webhookConfigRow" class="hidden mt-2.5 pt-2 border-t border-amber-200 flex gap-2">
-            <input 
-              type="url" 
-              id="webhookUrlInput" 
-              placeholder="https://script.google.com/macros/s/.../exec"
-              class="flex-1 px-3 py-1.5 text-xs border border-gray-300 rounded-lg text-neutral-900 focus:outline-none focus:ring-1 focus:ring-[#14A69A]"
-            >
-            <button onclick="saveWebhookUrl()" class="px-3 py-1.5 bg-[#14A69A] text-white rounded-lg font-bold text-xs">
-              저장
-            </button>
-          </div>
+          <p class="text-[11px] text-emerald-800 mt-1">
+            어떤 기기(바이어 휴대폰, 태블릿 등)에서 제출하든 대표님의 구글 시트로 즉시 전송됩니다.
+          </p>
         </div>
 
         <!-- Leads Count & Export Toolbar -->
@@ -639,7 +621,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
             <p class="text-sm font-medium text-neutral-600">이 기기에서 직접 제출된 로컬 기록이 없습니다.</p>
-            <p class="text-xs text-gray-400 mt-1">바이어가 자신의 폰으로 제출한 내용은 위 '구글 스프레드시트'로 100% 자동 취합됩니다.</p>
+            <p class="text-xs text-gray-400 mt-1">바이어가 자신의 폰으로 제출한 내용은 대표님의 구글 스프레드시트로 100% 자동 취합됩니다.</p>
           </div>
         </div>
 
@@ -818,15 +800,15 @@
     };
 
     // ==========================================
-    // 2. Storage & Cloud Webhook Config
+    // 2. Storage & Cloud Webhook Config (Hardcoded)
     // ==========================================
     const ADMIN_PASS = "11111";
     let isAdminUnlocked = false;
     let leadsData = JSON.parse(localStorage.getItem('abso_leads_backup') || '[]');
     let currentBuyer = null;
 
-    // Webhook URL (Stored in localStorage or hardcode your deployed Google Apps Script URL here)
-    let GOOGLE_SHEET_WEBHOOK_URL = localStorage.getItem('abso_google_webhook_url') || "";
+    // ★ 대표님의 구글 Apps Script Webhook URL 영구 고정 (모든 기기에서 즉시 전송) ★
+    const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxN4DA1ZbG1Qqlb2FmzmCyXlSSOPZjvBiwzOPBGS7eADrIZeh0f8A5soEv-lbqbSLxI/exec";
 
     // Set & Toggle Language (RTL vs LTR)
     function setLanguage(lang) {
@@ -996,8 +978,8 @@
       localStorage.setItem('abso_leads_backup', JSON.stringify(leadsData));
       currentBuyer = newLead;
 
-      // 2. Transmit to Cloud Database (Google Sheets via Webhook or SheetDB API)
-      await sendToCloudDatabase(newLead);
+      // 2. Transmit to Google Sheets Cloud (Mobile-Safe Multi-Fallbacks)
+      sendToCloudDatabase(newLead);
 
       // 3. Switch to Download Page
       renderBrochurePage(newLead);
@@ -1009,26 +991,37 @@
       submitBtnText.textContent = I18N[currentLang].btnSubmit;
     }
 
-    // Transmit lead to Cloud (Google Sheets / Webhook)
+    // ★ 모바일 브라우저 보안/CORS 차단 없는 무결점 클라우드 전송 함수 ★
     async function sendToCloudDatabase(lead) {
-      if (!GOOGLE_SHEET_WEBHOOK_URL) {
-        console.warn("Google Sheet Webhook URL not configured. Stored locally only.");
-        return;
-      }
+      if (!GOOGLE_SHEET_WEBHOOK_URL) return;
 
+      const payloadString = JSON.stringify(lead);
+
+      // 방법 1: keepalive & text/plain (사파리, 안드로이드 크롬 모바일 브라우저 최적화)
       try {
-        // Send JSON payload via POST (mode: no-cors ensures Google Apps Script succeeds without CORS block)
         await fetch(GOOGLE_SHEET_WEBHOOK_URL, {
           method: "POST",
           mode: "no-cors",
+          cache: "no-cache",
+          keepalive: true,
           headers: {
-            "Content-Type": "application/json"
+            // text/plain을 지정해야 모바일 브라우저의 OPTIONS preflight 검사를 우회하고 안전하게 전달됩니다.
+            "Content-Type": "text/plain;charset=utf-8"
           },
-          body: JSON.stringify(lead)
+          body: payloadString
         });
-        console.log("Successfully dispatched lead to Google Sheets cloud!");
+        console.log("Transmission to Google Sheets dispatched successfully.");
       } catch (err) {
-        console.error("Cloud transmission error:", err);
+        console.warn("Fetch failed, fallback to beacon/form:", err);
+        // 방법 2: 브라우저가 화면을 닫거나 백그라운드로 전환될 때를 대비한 sendBeacon 백업
+        try {
+          if (navigator.sendBeacon) {
+            const blob = new Blob([payloadString], { type: 'text/plain;charset=utf-8' });
+            navigator.sendBeacon(GOOGLE_SHEET_WEBHOOK_URL, blob);
+          }
+        } catch (beaconErr) {
+          console.error("All transmission attempts failed:", beaconErr);
+        }
       }
     }
 
@@ -1102,7 +1095,7 @@
     }
 
     // ==========================================
-    // 3. Admin Security & Google Sheet Management
+    // 3. Admin Security
     // ==========================================
     function openAdminModal() {
       const modal = document.getElementById('adminModal');
@@ -1158,36 +1151,10 @@
       document.getElementById('adminModal').classList.add('hidden');
     }
 
-    function toggleWebhookInput() {
-      const row = document.getElementById('webhookConfigRow');
-      row.classList.toggle('hidden');
-      const input = document.getElementById('webhookUrlInput');
-      input.value = GOOGLE_SHEET_WEBHOOK_URL;
-    }
-
-    function saveWebhookUrl() {
-      const input = document.getElementById('webhookUrlInput');
-      const val = input.value.trim();
-      GOOGLE_SHEET_WEBHOOK_URL = val;
-      localStorage.setItem('abso_google_webhook_url', val);
-      document.getElementById('webhookConfigRow').classList.add('hidden');
-      updateAdminView();
-      showToast('구글 시트 연동 URL이 저장되었습니다!', '⚡');
-    }
-
     function updateAdminView() {
       const countEl = document.getElementById('adminTotalCount');
       const listEl = document.getElementById('adminLeadsList');
       const emptyEl = document.getElementById('adminEmptyState');
-      const badge = document.getElementById('webhookStatusBadge');
-
-      if (GOOGLE_SHEET_WEBHOOK_URL) {
-        badge.textContent = "연동 활성화됨 (Google Cloud)";
-        badge.className = "text-[10px] px-2 py-0.5 rounded font-black bg-emerald-100 text-emerald-800";
-      } else {
-        badge.textContent = "미연동 상태 (로컬만 저장)";
-        badge.className = "text-[10px] px-2 py-0.5 rounded font-black bg-amber-200 text-amber-900";
-      }
 
       countEl.textContent = leadsData.length;
 
